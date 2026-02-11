@@ -1,0 +1,236 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+    overflow: hidden;
+    background-image: url('/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(10, 10, 10, 0.92) 0%,
+            rgba(10, 10, 10, 0.75) 40%,
+            rgba(10, 10, 10, 0.92) 100%);
+    z-index: 0;
+}
+
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Removed .bgGlow and .bgGrid as we're using an image now */
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    background: rgba(245, 197, 24, 0.08);
+    border: 1px solid rgba(245, 197, 24, 0.15);
+    animation: heroFadeInUp 0.6s ease both;
+}
+
+.headline {
+    max-width: 800px;
+    animation: heroFadeInUp 0.6s ease 0.1s both;
+    opacity: 0;
+}
+
+.subheadline {
+    max-width: 600px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    animation: heroFadeInUp 0.6s ease 0.2s both;
+    opacity: 0;
+}
+
+.ctas {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: heroFadeInUp 0.6s ease 0.3s both;
+    opacity: 0;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+    padding: var(--space-lg) var(--space-2xl);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    animation: heroFadeInUp 0.6s ease 0.4s both;
+    opacity: 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.statNumber {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.statDivider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-border);
+}
+
+/* Comparison visual */
+.comparison {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+    animation: heroFadeInUp 0.6s ease 0.5s both;
+    opacity: 0;
+}
+
+.compCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    min-width: 160px;
+}
+
+.compIcon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.compHot {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.compCool {
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.compTemp {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #EF4444;
+}
+
+.compTempCool {
+    color: #22C55E;
+}
+
+.compLabel {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.compArrow {
+    animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: calc(var(--header-height) + var(--space-2xl));
+    }
+
+    .stats {
+        flex-direction: row;
+        gap: var(--space-md);
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .statNumber {
+        font-size: 1.3rem;
+    }
+
+    .statLabel {
+        font-size: 0.65rem;
+    }
+
+    .statDivider {
+        height: 32px;
+    }
+
+    .comparison {
+        flex-direction: row;
+        gap: var(--space-md);
+    }
+
+    .compCard {
+        padding: var(--space-md);
+        min-width: 120px;
+    }
+
+    .compIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .compTemp {
+        font-size: 1.5rem;
+    }
+
+    .compLabel {
+        font-size: 0.7rem;
+    }
+
+    .ctas {
+        flex-direction: column;
+        width: 100%;
+    }
+}

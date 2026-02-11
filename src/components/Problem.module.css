@@ -1,0 +1,106 @@
+.problem {
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+}
+
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #EF4444, #F97316);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.card:hover {
+    border-color: rgba(239, 68, 68, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.1);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.iconWrap {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg);
+    background: rgba(239, 68, 68, 0.08);
+    border-radius: 50%;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+}
+
+.cardDesc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.cardStat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.cardStatNum {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #EF4444;
+}
+
+.cardStatLabel {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hook {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hook strong {
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
