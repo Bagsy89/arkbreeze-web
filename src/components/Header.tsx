@@ -22,7 +22,7 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
-        <a href="#" className={styles.logo} aria-label="SolAir Solutions home">
+        <a href="#" className={styles.logo} aria-label="Thermal Flow home">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="20" cy="20" r="18" stroke="#F5C518" strokeWidth="2.5" fill="none" />
             <circle cx="20" cy="20" r="6" fill="#F5C518" />
@@ -36,7 +36,7 @@ export default function Header() {
             <line x1="28.49" y1="11.51" x2="34.14" y2="5.86" stroke="#F5C518" strokeWidth="2.5" strokeLinecap="round" />
           </svg>
           <span className={styles.logoText}>
-            Ark<span className={styles.logoAccent}>Breeze</span>
+            Thermal<span className={styles.logoAccent}>Flow</span>
           </span>
         </a>
 

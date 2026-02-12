@@ -16,7 +16,7 @@ export default function Footer() {
                             <line x1="0" y1="20" x2="8" y2="20" stroke="#F5C518" strokeWidth="2.5" strokeLinecap="round" />
                             <line x1="32" y1="20" x2="40" y2="20" stroke="#F5C518" strokeWidth="2.5" strokeLinecap="round" />
                         </svg>
-                        <span className={styles.logoText}>Ark<span className={styles.logoAccent}>Breeze</span></span>
+                        <span className={styles.logoText}>Thermal<span className={styles.logoAccent}>Flow</span></span>
                     </a>
                     <p className={styles.tagline}>Solar-powered roof ventilation for cooler, healthier QLD homes.</p>
                 </div>
@@ -29,12 +29,12 @@ export default function Footer() {
                         </svg>
                         James - 0414 148 222
                     </a>
-                    <a href="https://arkbreeze.com.au" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                    <a href="https://thermalflow.com.au" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                             <circle cx="8" cy="8" r="7" stroke="#9CA3AF" strokeWidth="1.5" />
                             <path d="M1 8h14M8 1c2 2 3 4 3 7s-1 5-3 7c-2-2-3-4-3-7s1-5 3-7z" stroke="#9CA3AF" strokeWidth="1.5" />
                         </svg>
-                        arkbreeze.com.au
+                        thermalflow.com.au
                     </a>
                 </div>
 
@@ -51,7 +51,7 @@ export default function Footer() {
 
             <div className={styles.bottom}>
                 <div className="container">
-                    <p>&copy; {year} ArkBreeze. All rights reserved.</p>
+                    <p>&copy; {year} Thermal Flow. All rights reserved.</p>
                 </div>
             </div>
         </footer>

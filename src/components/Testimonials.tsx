@@ -18,7 +18,7 @@ export default function Testimonials() {
             name: 'David R.',
             location: 'Ipswich',
             stars: 5,
-            text: 'The ArkBreeze team were professional from start to finish. Quick assessment, clear recommendation, and installed in under 2 hours. Our roof space is 25 degrees cooler.',
+            text: 'The Thermal Flow team were professional from start to finish. Quick assessment, clear recommendation, and installed in under 2 hours. Our roof space is 25 degrees cooler.',
         },
     ];
 

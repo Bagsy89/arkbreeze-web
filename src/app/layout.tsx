@@ -17,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://arkbreeze.com.au'),
-  title: "ArkBreeze | Solar Roof Ventilation QLD - Beat the Heat, $0 Running Costs",
+  metadataBase: new URL('https://thermalflow.com.au'),
+  title: "Thermal Flow | Solar Roof Ventilation QLD - Beat the Heat, $0 Running Costs",
   description:
     "Solar-powered roof ventilation for Queensland homes. Reduce roof temperatures by up to 30°C with zero running costs. Authorised SolarArk dealer. Free assessment and professional installation. 10-year warranty.",
   keywords: [
@@ -32,21 +32,21 @@ export const metadata: Metadata = {
     "mould prevention roof",
     "whirlybird alternative",
     "solar vent installation Brisbane",
-    "ArkBreeze",
+    "Thermal Flow",
   ],
-  authors: [{ name: "ArkBreeze" }],
+  authors: [{ name: "Thermal Flow" }],
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_AU",
-    title: "ArkBreeze | Solar Roof Ventilation QLD",
+    title: "Thermal Flow | Solar Roof Ventilation QLD",
     description:
       "Drop your roof temperature by up to 30°C with 100% solar-powered ventilation. $0 running costs. Professional QLD installation. 10-year warranty.",
-    siteName: "ArkBreeze",
+    siteName: "Thermal Flow",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ArkBreeze | Solar Roof Ventilation QLD",
+    title: "Thermal Flow | Solar Roof Ventilation QLD",
     description:
       "Drop your roof temperature by up to 30°C with 100% solar-powered ventilation. $0 running costs. 10-year warranty.",
   },
@@ -107,7 +107,7 @@ const faqSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "ArkBreeze",
+  name: "Thermal Flow",
   description: "Authorised SolarArk dealer providing solar-powered roof ventilation installation across Queensland.",
   telephone: "0414 148 222",
   areaServed: {

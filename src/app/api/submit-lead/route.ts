@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
                 suburb: body.suburb || '',
                 roofType: body.roofType || '',
                 message: body.message || '',
-                source: 'ArkBreeze Landing Page',
+                source: 'Thermal Flow Landing Page',
             }),
         });
 

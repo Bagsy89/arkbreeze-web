@@ -33,7 +33,7 @@ export default function Benefits() {
                     <div className={`${styles.column} ${styles.success}`}>
                         <div className={styles.colHeader}>
                             <span className={styles.colIcon}>✅</span>
-                            <h3>With ArkBreeze</h3>
+                            <h3>With Thermal Flow</h3>
                         </div>
                         <ul className={styles.list}>
                             {withItems.map((item, i) => (
@@ -49,7 +49,7 @@ export default function Benefits() {
                     <div className={`${styles.column} ${styles.failure}`}>
                         <div className={styles.colHeader}>
                             <span className={styles.colIcon}>⚠️</span>
-                            <h3>Without</h3>
+                            <h3>Without Thermal Flow</h3>
                         </div>
                         <ul className={styles.list}>
                             {withoutItems.map((item, i) => (

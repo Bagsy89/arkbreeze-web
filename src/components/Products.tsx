@@ -13,6 +13,7 @@ export default function Products() {
             panelType: 'Tilt Poly-silicon',
             bestFor: 'East, West & South facing installations',
             popular: false,
+            image: '/sav-20t.jpg',
         },
         {
             model: 'SAV-20',
@@ -25,6 +26,7 @@ export default function Products() {
             panelType: 'Flush Poly-silicon',
             bestFor: 'North facing roofs, sleek and low profile',
             popular: true,
+            image: '/sav-20.jpg',
         },
         {
             model: 'SAV-30',
@@ -37,6 +39,7 @@ export default function Products() {
             panelType: 'Flush Poly-silicon',
             bestFor: 'Large homes, sheds & commercial spaces',
             popular: false,
+            image: '/sav-30.jpg',
         },
     ];
 
@@ -65,18 +68,13 @@ export default function Products() {
                         <div key={i} className={`${styles.card} ${p.popular ? styles.popular : ''}`}>
                             {p.popular && <div className={styles.popularBadge}>Most Popular</div>}
 
-                            {/* Product illustration placeholder */}
+                            {/* Product photo */}
                             <div className={styles.illustration}>
-                                <svg width="80" height="60" viewBox="0 0 80 60" fill="none" aria-hidden="true">
-                                    <rect x="10" y="30" width="60" height="25" rx="3" stroke="#F5C518" strokeWidth="2" />
-                                    {p.model === 'SAV-20T' ? (
-                                        <path d="M15 30L40 10L65 30" stroke="#F5C518" strokeWidth="2" strokeLinejoin="round" />
-                                    ) : (
-                                        <rect x="20" y="18" width="40" height="12" rx="2" stroke="#F5C518" strokeWidth="2" />
-                                    )}
-                                    <circle cx="40" cy="42" r="8" stroke="#F5C518" strokeWidth="1.5" fill="none" />
-                                    <path d="M40 34v16M32 42h16" stroke="#F5C518" strokeWidth="1" opacity="0.5" />
-                                </svg>
+                                <img
+                                    src={p.image}
+                                    alt={`SolarArk ${p.model} ${p.name}`}
+                                    className={styles.productImage}
+                                />
                             </div>
 
                             <div className={styles.cardHeader}>
