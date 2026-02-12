@@ -120,6 +120,10 @@
         align-items: flex-start;
     }
 
+    .form {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
     .row {
         grid-template-columns: 1fr;
     }
