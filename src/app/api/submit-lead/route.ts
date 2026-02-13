@@ -22,6 +22,16 @@ export async function POST(request: NextRequest) {
             );
         }
 
+        // Australian mobile phone validation (04xx xxx xxx or +614xx xxx xxx)
+        const cleanPhone = phone.replace(/\s/g, '');
+        const phoneRegex = /^(?:\+?614|04)\d{8}$/;
+        if (!phoneRegex.test(cleanPhone)) {
+            return NextResponse.json(
+                { success: false, error: 'Please enter a valid Australian mobile number (e.g. 0400 000 000).' },
+                { status: 400 }
+            );
+        }
+
         // Google Apps Script Web App URL (set in .env.local)
         const GOOGLE_SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
 

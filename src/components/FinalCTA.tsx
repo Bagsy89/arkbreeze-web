@@ -151,6 +151,8 @@ export default function FinalCTA() {
                                     required
                                     placeholder="0400 000 000"
                                     autoComplete="tel"
+                                    pattern="^(?:\+?61\s?4|04)\d{2}[\s]?\d{3}[\s]?\d{3}$"
+                                    title="Please enter a valid Australian mobile number (e.g. 0400 000 000)"
                                 />
                             </div>
 
